@@ -17,9 +17,9 @@ const Login = () => {
                 </h2>
             </div>
 
-            <form onSubmit={handleLogin} class="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-md shadow-md dark:bg-gray-600 mb-20">
+            <div  class="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-md shadow-md dark:bg-gray-600 mb-20">
                 <img src={logo} class="" alt='' />
-                <form class="mt-6">
+                <form onSubmit={handleLogin} class="mt-6">
                     <div>
                         <label for="username" class="block text-sm text-white">Username</label>
                         <input name="name" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
@@ -69,7 +69,7 @@ const Login = () => {
 
                 <p class="mt-8 font-light text-center text-md text-white"> Don't have an account?
                     <Link to={'/signup'} class="font-medium text-white hover:underline ml-2">Create One</Link></p>
-            </form>
+            </div>
         </div>
     );
 };

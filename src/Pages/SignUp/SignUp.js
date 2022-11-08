@@ -1,23 +1,43 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const SignUp = () => {
+    const { createUser } = useContext(AuthContext);
+    const handleSignUp = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(err => console.error(err));
+    }
+
     return (
         <div>
-
             <div className='text-center'>
                 <h2 className="text-2xl font-bold my-6 hover:text-orange-600 hover:underline">
                     SignUp Now
                 </h2>
             </div>
 
-            <form class="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-md shadow-md dark:bg-gray-600 mb-20">
+            <div class="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-md shadow-md dark:bg-gray-600 mb-20">
                 <img src={logo} class="" alt='' />
-                <form class="mt-6">
+                <form onSubmit={handleSignUp} class="mt-6">
                     <div>
                         <label for="username" class="block text-sm text-white">Full Name</label>
-                        <input name="name" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required/>
+                        <input name="name" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required />
+                    </div>
+
+                    <div>
+                        <label for="username" class="block text-sm text-white mt-4">Your Email</label>
+                        <input name="email" type="email" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required />
                     </div>
 
                     <div class="mt-4">
@@ -25,7 +45,7 @@ const SignUp = () => {
                             <label for="password" class="block text-sm text-white">Password</label>
                         </div>
 
-                        <input name="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required/>
+                        <input name="password" type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" required />
                     </div>
 
                     <div class="mt-6">
@@ -63,7 +83,7 @@ const SignUp = () => {
 
                 <p class="mt-8 font-light text-center text-md text-white"> Already have an account?
                     <Link to={'/login'} class="font-medium text-white hover:underline ml-2">Login</Link></p>
-            </form>
+            </div>
         </div>
     );
 };
