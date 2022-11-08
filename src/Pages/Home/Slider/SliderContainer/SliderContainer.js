@@ -36,8 +36,8 @@ export default function Index() {
                                     <Slide index={1}>
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://pbs.twimg.com/media/DoDG2oXU0AAyZG_.jpg" alt="sitting area" className="object-cover object-center w-full" />
-                                            <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                            <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6 ">
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -48,7 +48,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://snapshotbd.com/admin/uploads/1a5f9a6f990b6474fe2aed37a9b27c61.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -59,7 +59,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://cdn0.weddingwire.in/article/9086/3_2/960/jpg/16809-creative-wedding-photography-avinash-dhoundhiyal-photography-lead-image.jpeg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -89,7 +89,7 @@ export default function Index() {
                                         </div>
                                     </Slide>
                                     <Slide index={6}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex fleg 2hrink-0 relative w-full sm:w-auto">
                                             <img src="https://images.squarespace-cdn.com/content/v1/5db251f149eaf220a2dd1672/1615172953576-LVXT2PWRFIPRHT460369/2020-10-18_Nagaraja+Eva%27s+Birthday+D75_5673.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
@@ -100,7 +100,7 @@ export default function Index() {
                                         </div>
                                     </Slide>
                                     <Slide index={7}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex fleg 2hrink-0 relative w-full sm:w-auto">
                                             <img src="https://images.squarespace-cdn.com/content/v1/550b19b4e4b01743e6b49e83/1564563827584-JRNGMV4D450T8K5O7EMV/cake-smash-photography-baby-birthday-san-jose-bay-area-photographer-3.jpg?format=2500w" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
@@ -147,7 +147,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://pbs.twimg.com/media/DoDG2oXU0AAyZG_.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -158,7 +158,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://snapshotbd.com/admin/uploads/1a5f9a6f990b6474fe2aed37a9b27c61.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -169,7 +169,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://cdn0.weddingwire.in/article/9086/3_2/960/jpg/16809-creative-wedding-photography-avinash-dhoundhiyal-photography-lead-image.jpeg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -199,7 +199,7 @@ export default function Index() {
                                         </div>
                                     </Slide>
                                     <Slide index={6}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex fleg 2hrink-0 relative w-full sm:w-auto">
                                             <img src="https://images.squarespace-cdn.com/content/v1/5db251f149eaf220a2dd1672/1615172953576-LVXT2PWRFIPRHT460369/2020-10-18_Nagaraja+Eva%27s+Birthday+D75_5673.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
@@ -210,10 +210,10 @@ export default function Index() {
                                         </div>
                                     </Slide>
                                     <Slide index={7}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex fleg 2hrink-0 relative w-full sm:w-auto">
                                             <img src="https://images.squarespace-cdn.com/content/v1/550b19b4e4b01743e6b49e83/1564563827584-JRNGMV4D450T8K5O7EMV/cake-smash-photography-baby-birthday-san-jose-bay-area-photographer-3.jpg?format=2500w" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -257,7 +257,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://pbs.twimg.com/media/DoDG2oXU0AAyZG_.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -268,7 +268,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://snapshotbd.com/admin/uploads/1a5f9a6f990b6474fe2aed37a9b27c61.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -279,7 +279,7 @@ export default function Index() {
                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
                                             <img src="https://cdn0.weddingwire.in/article/9086/3_2/960/jpg/16809-creative-wedding-photography-avinash-dhoundhiyal-photography-lead-image.jpeg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
-                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
+                                                <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 1</h2>
                                                 <div className="flex h-full items-end pb-6">
                                                     <h3 className="text-xl lg:text-2xl font-semibold leading-5 lg:leading-6 text-white">Weeding Ceremony</h3>
                                                 </div>
@@ -298,7 +298,7 @@ export default function Index() {
                                         </div>
                                     </Slide>
                                     <Slide index={5}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex fleg 2hrink-0 relative w-full sm:w-auto">
                                             <img src="https://images.squarespace-cdn.com/content/v1/5db251f149eaf220a2dd1672/1615172953576-LVXT2PWRFIPRHT460369/2020-10-18_Nagaraja+Eva%27s+Birthday+D75_5673.jpg" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
@@ -320,7 +320,7 @@ export default function Index() {
                                         </div>
                                     </Slide>
                                     <Slide index={7}>
-                                        <div className="flex flex-shrink-0 relative w-full sm:w-auto">
+                                        <div className="flex fleg 2hrink-0 relative w-full sm:w-auto">
                                             <img src="https://images.squarespace-cdn.com/content/v1/550b19b4e4b01743e6b49e83/1564563827584-JRNGMV4D450T8K5O7EMV/cake-smash-photography-baby-birthday-san-jose-bay-area-photographer-3.jpg?format=2500w" alt="sitting area" className="object-cover object-center w-full" />
                                             <div className="bg-gray-800 bg-opacity-30 absolute w-full h-full p-6">
                                                 <h2 className="lg:text-xl leading-4 text-base lg:leading-5 text-white">Catalog 2</h2>
