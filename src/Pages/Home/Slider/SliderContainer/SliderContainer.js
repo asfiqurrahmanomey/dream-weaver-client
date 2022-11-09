@@ -5,11 +5,6 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 export default function Index() {
     return (
         <div className="container mx-auto">
-            <div className="flex flex-col w-full lg:flex-row">
-                <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center font-bolder text-orange-600">Let Us Makes Your Spacial Day into an Lifetime Memory</div>
-                <div className="divider lg:divider-horizontal">or</div>
-                <div className="grid flex-grow h-32 card bg-base-300 rounded-box place-items-center font-bolder text-orange-600">A picture is worth a thousand words can back to the past</div>
-            </div>
             <div className="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
                 {/* Carousel for desktop and large size devices */}
                 <CarouselProvider className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={7} visibleSlides={4} step={1} infinite={true}>
