@@ -10,13 +10,12 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
 
-
     return (
         <div>
             <div>
                 <div className='text-center mt-20'>
                     <h2 className="text-5xl font-bold my-6 hover:text-orange-600 hover:underline">
-                        Our total Service: {services.length}
+                        Our Services
                     </h2>
                     <p className='mb-6 hover:text-orange-600 hover:underline'>
                         It clearly and beautifully captures your emotions- the joy, the laughter, the tears, you name it. <br /> Our pride is in offering the best shoots as we help you tell your story in photos.
@@ -31,7 +30,8 @@ const Services = () => {
                     }
                 </div>
                 <div className='text-center my-10'>
-                    <Link to={'/services'} className='bg-gray-700 text-white p-4 rounded-xl hover:bg-orange-600'>More Services</Link>
+                    <Link to={'/allServices'} className='bg-gray-700 text-white p-4 rounded-xl hover:bg-orange-600'>More Services</Link>
+                    <span class="animate-ping bg-sky-400 opacity-75"></span>
                 </div>
             </div>
         </div>

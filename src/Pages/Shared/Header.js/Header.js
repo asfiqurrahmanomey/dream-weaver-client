@@ -7,7 +7,7 @@ const Header = () => {
     const menuItems = <>
         <li className='font-semibold'>
             <Link className='hover:text-orange-600 hover:underline' to='/'>Home</Link>
-            <Link to={'/services'} className='hover:text-orange-600 hover:underline'>Service</Link>
+            <Link to={'/allServices'} className='hover:text-orange-600 hover:underline'>Service</Link>
             <Link className='hover:text-orange-600 hover:underline' to='/'>Blog</Link>
         </li>
     </>
