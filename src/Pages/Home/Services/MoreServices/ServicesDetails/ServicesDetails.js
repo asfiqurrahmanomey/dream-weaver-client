@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServicesDetails = () => {
     const { title, img, description, price, rating, photographer } = useLoaderData();
@@ -40,11 +41,11 @@ const ServicesDetails = () => {
                         </div>
                     </div>
                     <div>
-                        <img
-                            className="object-cover w-full h-56 rounded-xl shadow-lg sm:h-96"
-                            src={img}
-                            alt=""
-                        />
+                        <PhotoProvider>
+                            <PhotoView src={img}>
+                                <img src={img} alt="" />
+                            </PhotoView>
+                        </PhotoProvider>
                     </div>
                 </div>
             </div>

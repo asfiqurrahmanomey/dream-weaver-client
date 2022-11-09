@@ -6,52 +6,46 @@ const Gallery = () => {
             <div className="py-20 flex flex-col items-center justify-center">
                 <div className="xl:w-1/2 w-11/12">
                     <h1 tabIndex={0} className="text-6xl font-bold 2xl:leading-10 leading-0 text-center">
-                    Our Gallery
+                        Moment Gallery
                     </h1>
-                    <h2  tabIndex={0} className="text-base leading-normal text-center mt-5">
-                    It's not enough to just own a camera. Everyone owns a camera. To be a photographer, <br /> you must understand, appreciate, and harness the power you hold!
+                    <h2 tabIndex={0} className="text-base leading-normal text-center mt-5">
+                        It's not enough to just own a camera. Everyone owns a camera. To be a photographer, <br /> you must understand, appreciate, and harness the power you hold!
                     </h2>
                 </div>
-                <div className="2xl:px-20 lg:px-12 px-4 flex flex-wrap items-start mt-4 ">
-                    <div className="mt-24">
-                        <div className="flex items-end ">
-                            <img tabIndex={0} src="https://i.pinimg.com/564x/aa/43/4c/aa434c00f362dddc8cd17f67c267c04f.jpg" alt="girl with blue background" className="w-20 h-20 rounded-lg mr-6" />
-                            <img tabIndex={0} src="https://i.pinimg.com/564x/63/24/29/632429f0fe1f461ee568cccc2e106ee1.jpg" alt="guy winking" className="w-48 h-36 rounded-lg" />
-                        </div>
-                        <div className="flex items-center justify-end my-6">
-                            <img tabIndex={0} src="https://i.ibb.co/jRbF1KF/Rectangle-4.png" alt="guy smiling" />
-                        </div>
-                        <div className="flex items-start">
-                            <img tabIndex={0} src="https://i.ibb.co/Sf4Q94L/Rectangle-6.png" alt="girl with bluw background" className="w-48 h-48 rounded-lg" />
-                            <img tabIndex={0} src="https://i.ibb.co/fnNqJrx/Rectangle-7.png" alt="guy with glasses" className="w-20 h-20 rounded-lg ml-6 flex-shrink-0 object-cover object-fit" />
-                        </div>
-                    </div>
-                    <div className="ml-6 mt-32">
-                        <img tabIndex={0} src="https://i.ibb.co/LSxy7fy/Rectangle-9.png" className="w-72 h-80 rounded-lg" alt="guy with sunglasses" />
-                        <div className="flex items-start mt-6">
-                            <img tabIndex={0} src="https://i.ibb.co/X8PKD3q/Rectangle-8.png" alt="girl  laughing" className="w-48 h-48 rounded-lg" />
-                            <img tabIndex={0} src="https://i.ibb.co/2Yj51CY/Rectangle-13.png" alt="guy with glasses" className="w-20 h-20 rounded-lg ml-6 object-cover object-fit" />
-                        </div>
-                    </div>
-                    <div className="mt-14 ml-6">
-                        <div className="lg:flex ">
-                            <div>
-                                <img tabIndex={0} src="https://i.ibb.co/bWGVSkP/Rectangle-10.png" alt="group of friends" className="w-96 h-72 rounded-lg object-center object-fit" />
-                            </div>
-                            <div>
-                                <div className="flex ml-6">
-                                    <img tabIndex={0} src="https://i.ibb.co/80jvpSv/Rectangle-16.png" className="w-20 h-20 rounded-lg mt-14" alt="man" />
-                                    <img tabIndex={0} src="https://i.ibb.co/6PR2Y74/Rectangle-15.png" className="w-20 h-24 rounded-lg ml-6" alt="woman" />
+                <section className="overflow-hidden text-gray-700">
+                    <div className="container px-5 py-2 mx-auto lg:pt-10 lg:px-32">
+                        <div className="flex flex-wrap -m-1 md:-m-2">
+                            <div className="flex flex-wrap w-1/2">
+                                <div className="w-1/2 p-1 md:p-2">
+                                    <img alt="gallery" className="hover:scale-110 transition duration-300 ease-in-out block object-cover object-center w-full h-full rounded-lg"
+                                        src="https://weddingdiary.com.bd/wp-content/uploads/2022/03/08.-portrait-01.jpg" />
                                 </div>
-                                <img tabIndex={0} src="https://i.ibb.co/M5rvjhk/Rectangle-14.png" alt="boy with blonde hair" className="ml-6 mt-6 w-48 h-32 rounded-lg" />
+                                <div className="w-1/2 p-1 md:p-2">
+                                    <img alt="gallery" className="hover:scale-110 transition duration-300 ease-in-out block object-cover object-center w-full h-full rounded-lg"
+                                        src="https://i0.wp.com/www.tobiahtayo.com/wp-content/uploads/2018/03/hindu-wedding-photography-thornton-manor-156.jpg?resize=960%2C640&ssl=1" />
+                                </div>
+                                <div className="w-full p-1 md:p-2">
+                                    <img alt="gallery" className="hover:scale-110 transition duration-300 ease-in-out block object-cover object-center w-full h-full rounded-lg"
+                                        src="https://snapshotbd.com/admin/uploads/1a5f9a6f990b6474fe2aed37a9b27c61.jpg" />
+                                </div>
+                            </div>
+                            <div className="flex flex-wrap w-1/2">
+                                <div className="w-full p-1 md:p-2">
+                                    <img alt="gallery" className="hover:scale-110 transition duration-300 ease-in-out block object-cover object-center w-full h-full rounded-lg"
+                                        src="https://i.pinimg.com/originals/14/26/70/14267001791dd3eb1bcc342b0541389e.jpg" />
+                                </div>
+                                <div className="w-1/2 p-1 md:p-2">
+                                    <img alt="gallery" className="hover:scale-110 transition duration-300 ease-in-out block object-cover object-center w-full h-full rounded-lg"
+                                        src="https://www.bdeventmanagement.com/wp-content/uploads/2018/12/Best-professional-Wedding-photographers-in-Bangladesh-top-10-photographer-in-bangladesh-bd-wedding-photographer-wedding-photography-bangladesh-dhaka-BD-Event-6.jpg" />
+                                </div>
+                                <div className="w-1/2 p-1 md:p-2">
+                                    <img alt="gallery" className="hover:scale-110 transition duration-300 ease-in-out block object-cover object-center w-full h-full rounded-lg"
+                                        src="https://humayra.com.bd/wp-content/uploads/2019/05/Wedding-of-Farha.jpg" />
+                                </div>
                             </div>
                         </div>
-                        <div className="mt-6 flex">
-                            <img tabIndex={0} className="w-48 h-48 rounded-lg" src="https://i.ibb.co/GPpMsbr/Rectangle-12.png" alt="young girl with red hair" />
-                            <img tabIndex={0} className="w-72 h-56 rounded-lg ml-6" src="https://i.ibb.co/VBcgkVL/Rectangle-11.png" alt="young girl with red hair" />
-                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     );
