@@ -21,7 +21,7 @@ const Services = () => {
                         It clearly and beautifully captures your emotions- the joy, the laughter, the tears, you name it. <br /> Our pride is in offering the best shoots as we help you tell your story in photos.
                     </p>
                 </div>
-                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 '>
+                <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 '>
                     {
                         services.map(service => <ServicesCard
                             key={services._id}

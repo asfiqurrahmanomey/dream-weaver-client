@@ -8,7 +8,7 @@ const Header = () => {
         <li className='font-semibold'>
             <Link className='hover:text-orange-600 hover:underline' to='/'>Home</Link>
             <Link to={'/allServices'} className='hover:text-orange-600 hover:underline'>Service</Link>
-            <Link className='hover:text-orange-600 hover:underline' to='/'>Blog</Link>
+            <Link to={'/blog'} className='hover:text-orange-600 hover:underline'>Blog</Link>
         </li>
     </>
 

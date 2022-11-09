@@ -15,7 +15,7 @@ const ServicesCard = ({ service }) => {
                             <h3 className="py-2 font-bold tracking-wide text-center text-white uppercase">{title}</h3>
                             <div className="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
                                 <span className="font-bold text-gray-800 dark:text-gray-200">${price}</span>
-                                <Link to={'/services'} className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded   focus:outline-none hover:bg-orange-600">More Details</Link>
+                                <Link to={'/allServices'} className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded   focus:outline-none hover:bg-orange-600">More Details</Link>
                             </div>
                         </div>
                     </div>

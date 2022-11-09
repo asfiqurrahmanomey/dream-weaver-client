@@ -12,8 +12,8 @@ const MoreServiceCard = ({ allServices }) => {
                 <div class="flex flex-col items-center justify-center w-full max-w-sm mx-auto">
                     <Link class="w-full block h-full">
                         <PhotoProvider>
-                            <PhotoView className='h-64 w-full rounded-t-xl' src={img}>
-                                <img src={img} alt="" />
+                            <PhotoView className='' src={img}>
+                                <img className='rounded-t-lg h-64 w-full' src={img} alt="" />
                             </PhotoView>
                         </PhotoProvider>
                         <div class="bg-white dark:bg-gray-800 w-full p-4 text-justify rounded-b-xl ">
@@ -31,8 +31,8 @@ const MoreServiceCard = ({ allServices }) => {
                                         <p>{description}</p>
                                 }
                             </h2>
-                            <div class="flex items-center mt-4">
-                                <div class="flex flex-col justify-between ml-4 text-sm">
+                            <div class="flex mt-4">
+                                <div class="flex flex-col justify-between text-sm">
                                     <p class="text-gray-800 dark:text-white">
                                         Photographer: {photographer}
                                     </p>

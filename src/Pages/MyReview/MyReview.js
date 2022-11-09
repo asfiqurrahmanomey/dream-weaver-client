@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const MyReview = () => {
     return (
         <div>
-            <section className="min-h-screen bg-cover bg-scroll " style={{
+            <section className="min-h-screen bg-scroll bg-no-repeat bg-cover" style={{
                 backgroundImage: `url("https://cdn0.weddingwire.in/vendor/3618/3_2/960/jpg/dsc06994-_15_43618-164512839259048.jpeg")`
             }}>
                 <div className="flex flex-col min-h-screen bg-scroll ">
