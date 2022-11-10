@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const MyReview = () => {
+const {user} = useContext(AuthContext);
+
+
     return (
         <div>
             <section className="min-h-screen bg-scroll bg-no-repeat bg-cover" style={{
@@ -27,17 +31,17 @@ const MyReview = () => {
                                     <form className="mt-6 bg-scroll ">
                                         <div className="flex-1">
                                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
-                                            <input name="name" type="text" placeholder="John Doe" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:text-gray-300 dark:border-gray-600 dark:bg-gray-900 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                                            <input name="name" type="text" placeholder="John Doe" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:text-gray-300 dark:border-gray-600 dark:bg-gray-900 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required/>
                                         </div>
 
                                         <div className="flex-1 mt-6">
                                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                                            <input name="email" type="email" placeholder="johndoe@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                                            <input name="email" type="email" placeholder="johndoe@example.com" defaultValue={user?.email} className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" readOnly/>
                                         </div>
 
                                         <div className="flex-1 mt-6">
-                                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                                            <input type="file" id="img" name="img" placeholder="johndoe@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" />
+                                            <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Your Image</label>
+                                            <input type="file" id="img" name="img" placeholder="johndoe@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required/>
                                         </div>
 
                                         <div className="w-full mt-6">
