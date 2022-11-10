@@ -36,12 +36,12 @@ const router = createBrowserRouter([
             {
                 path: '/allServices',
                 element: <MoreServices></MoreServices>,
-                loader: () => fetch('http://localhost:5000/allServices')
+                loader: () => fetch('https://dream-weaver-server.vercel.app/allServices')
             },
             {
                 path: '/services/:id',
                 element: <ServicesDetails></ServicesDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://dream-weaver-server.vercel.app/services/${params.id}`)
             },
             {
                 path: 'addservices',

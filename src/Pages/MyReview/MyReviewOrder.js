@@ -6,7 +6,7 @@ const MyReviewOrder = ({ review, handleDelete }) => {
     const { _id, price, serviceName, services, message, photo } = review;
     const [orderService, setOrderService] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${services}`)
+        fetch(`https://dream-weaver-server.vercel.app/services/${services}`)
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [services])
