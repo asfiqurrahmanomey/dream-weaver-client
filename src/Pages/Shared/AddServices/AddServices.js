@@ -4,7 +4,47 @@ import 'react-photo-view/dist/react-photo-view.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const AddServices = () => {
+    const handleServiceSubmit = event => {
+        event.preventDefault();
+        const form = event.target;
+
+        const title = form.title.value;
+        const img = form.img.value;
+        const price = form.price.value;
+        const rating = form.rating.value;
+        const photographer = form.photographer.value;
+        const description = form.description.value;
+
+
+        const service = {
+
+            title,
+            img,
+            price,
+            rating,
+            photographer,
+            description
+        }
+
+        fetch('http://localhost:5000/services', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(service)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if (data.acknowledged) {
+                toast.success('Data Submitted Successfully')
+                form.reset();
+            }
+        })
+        .catch(err => console.error(err));
+    }
     return (
         <div>
             {/* Submit Review Part Start */}
@@ -28,38 +68,35 @@ const AddServices = () => {
                             <div className="mt-8 lg:w-1/2 lg:mx-6">
                                 <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-gray-600 shadow-2xl rounded-xl lg:max-w-xl">
                                     <h1 className="text-2xl font-medium text-white">Add Service</h1>
-                                    <form>
+                                    <form onSubmit={handleServiceSubmit}>
                                         <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
-                                            <div>
-                                                <label className="text-gray-700 dark:text-gray-200" for="username">ID Must Be: _id</label>
-                                                <input type="text" name="_id" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
-                                            </div>
+
 
                                             <div>
                                                 <label className="text-gray-700 dark:text-gray-200" for="emailAddress">Title</label>
-                                                <input  type="text" name="title" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                                <input type="text" name="title" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                             </div>
 
                                             <div>
                                                 <label className="text-gray-700 text-xs font-bold dark:text-gray-200" for="password">Image Should Be Shared Live Link</label>
-                                                <input  type="text" name="img" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                                <input type="text" name="img" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                             </div>
 
                                             <div>
                                                 <label className="text-gray-700 dark:text-gray-200" for="passwordConfirmation">Price</label>
-                                                <input  type="text" name=""price className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                                <input type="text" name="price" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                             </div>
                                             <div>
                                                 <label className="text-gray-700 dark:text-gray-200" for="passwordConfirmation">Rating</label>
-                                                <input  type="text" name="rating" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                                <input type="text" name="rating" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                             </div>
                                             <div>
                                                 <label className="text-gray-700 dark:text-gray-200" for="passwordConfirmation">Photographer</label>
-                                                <input  type="text" name="photographer" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                                <input type="text" name="photographer" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                             </div>
                                             <div>
                                                 <label className="text-gray-700 dark:text-gray-200" for="passwordConfirmation">Description</label>
-                                                <input  type="text" name="description" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                                <input type="text" name="description" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                             </div>
                                         </div>
 
@@ -83,7 +120,7 @@ const AddServices = () => {
                     draggable
                     pauseOnHover
                     theme="dark"
-                 required />
+                    required />
             </section>
         </div>
     );
