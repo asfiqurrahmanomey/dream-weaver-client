@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
 const ServicesDetails = () => {
     const { _id, title, img, description, price, rating, photographer } = useLoaderData();
 

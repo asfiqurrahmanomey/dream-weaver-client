@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import MyReviewOrder from './MyReviewOrder';
 
+
 const MyReview = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
@@ -11,6 +12,24 @@ const MyReview = () => {
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
+
+    const handleDelete = id => {
+        const proceed = window.confirm('You Want to Delete');
+        if (proceed) {
+            fetch(`http://localhost:5000/reviews/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('Review Deleted Successfully');
+                        const remaining = reviews.filter(rev => rev._id !== id);
+                        setReviews(remaining);
+                    }
+                })
+        }
+    }
 
     return (
         <div className='max-w-screen-xl mx-auto'>
@@ -33,7 +52,7 @@ const MyReview = () => {
                                             <th
                                                 class="w-1/6 min-w-[160px] border-l border-transparent py-4 px-3 text-lg font-semibold text-white lg:py-7 lg:px-4"
                                             >
-                                                
+
                                             </th>
                                             <th
                                                 class="w-1/6 min-w-[160px] py-4 px-3 text-lg font-semibold text-white lg:py-7 lg:px-4"
@@ -67,6 +86,7 @@ const MyReview = () => {
                                             reviews.map(review => <MyReviewOrder
                                                 key={review._id}
                                                 review={review}
+                                                handleDelete={handleDelete}
                                             ></MyReviewOrder>)
                                         }
                                     </tbody>
@@ -76,8 +96,6 @@ const MyReview = () => {
                     </div>
                 </div>
             </section>
-
-
         </div>
     );
 };

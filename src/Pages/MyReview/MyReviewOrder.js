@@ -2,27 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from "react-icons/fa";
 
-const MyReviewOrder = ({ review }) => {
-    const { _id, price, customer, phone, serviceName, services, message, photo } = review;
+const MyReviewOrder = ({ review, handleDelete }) => {
+    const { _id, price, serviceName, services, message, photo } = review;
     const [orderService, setOrderService] = useState({})
     useEffect(() => {
         fetch(`http://localhost:5000/services/${services}`)
             .then(res => res.json())
             .then(data => setOrderService(data));
     }, [services])
-
-    const handleDelete = id => {
-        const proceed = window.confirm('You Want to Delete');
-        if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.data(data);
-                })
-        }
-    }
 
     return (
         <tr>
