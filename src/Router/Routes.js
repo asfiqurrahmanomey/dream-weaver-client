@@ -5,6 +5,7 @@ import MoreServices from '../Pages/Home/Services/MoreServices/MoreServices';
 import ServicesDetails from '../Pages/Home/Services/MoreServices/ServicesDetails/ServicesDetails';
 import Login from '../Pages/Login/Login';
 import MyReview from '../Pages/MyReview/MyReview';
+import MyReviewContent from '../Pages/MyReview/MyReviewContent';
 import SignUp from '../Pages/SignUp/SignUp';
 
 const { createBrowserRouter } = require("react-router-dom")
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: '/myreview',
                 element: <MyReview></MyReview>,
+            },
+            {
+                path: '/myreviewcontent',
+                element: <MyReviewContent></MyReviewContent>
             }
         ]
     }
