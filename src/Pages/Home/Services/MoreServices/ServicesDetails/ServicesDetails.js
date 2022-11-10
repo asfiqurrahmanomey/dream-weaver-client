@@ -6,6 +6,7 @@ import { AuthContext } from '../../../../../context/AuthProvider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const ServicesDetails = () => {
     const { _id, title, img, description, price, rating, photographer } = useLoaderData();
 
@@ -41,7 +42,7 @@ const ServicesDetails = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    toast.success('Review Success')
+                    toast.success('Review Submitted Successfully')
                     form.reset();
                 }
             })
