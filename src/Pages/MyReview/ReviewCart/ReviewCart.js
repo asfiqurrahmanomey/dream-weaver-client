@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
-const MyReview = () => {
+
+const ReviewCart = () => {
+    const { title } = useLoaderData();
     const { user } = useContext(AuthContext);
 
     const handleReviewSubmit = event => {
@@ -11,26 +13,11 @@ const MyReview = () => {
         const name = `${form.firstName.value}`;
         const email = user?.email || 'unregistered';
         const phone = form.phone.value;
-        const photo = form.photo.value;
         const message = form.message.value;
 
         const review = {
-            customer: name,
-            email,
-            phone,
-            message,
-            photo
+
         }
-        fetch('http://localhost:5000/reviews', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(review)
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(err => console.error(err));
     }
 
     return (
@@ -73,7 +60,7 @@ const MyReview = () => {
 
                                         <div className="flex-1 mt-6">
                                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">Your Image</label>
-                                            <input type="file" id="photo" name="photo" placeholder="johndoe@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
+                                            <input type="file" id="img" name="img" placeholder="johndoe@example.com" className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" required />
                                         </div>
 
                                         <div className="w-full mt-6">
@@ -95,4 +82,4 @@ const MyReview = () => {
     );
 };
 
-export default MyReview;
+export default ReviewCart;
