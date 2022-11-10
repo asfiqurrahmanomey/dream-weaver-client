@@ -4,6 +4,42 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+## Github Client Repo Link
+
+Github Repo [Github_private_repo](https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-asfiqurrahmanomey).
+
+## Github Server Repo Link
+
+Github Repo [Github_private_repo](https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-asfiqurrahmanomey).
+
+
+## CSS Framework
+
+Tailwind CSS 
+
+## Tailwind Component Library
+
+DaisyUI & Meraki UI Component Library
+
+## React Tostify
+
+React Tostify [TOSTIFY_SETUP](https://openapi.programming-hero.com/api/quiz/1).
+
+## Project Description
+
+## react Scroll to Top
+react scroll to top [TOSTIFY_SETUP](https://www.npmjs.com/package/react-scroll-to-top).
+## Project Description
+
+**Note: this is the main step !**
+
+1: Make the header globally and set the path.
+2.Add the Services inside the home using the API from Mongo DB.
+3.Link the Home section Service option with the All Services Page Mongo API.
+4.Added all the Review through the API Dynamically Using API from Mongo Data Base.
+5.Added The Static and the blog section.
+5.Added Service Add page and other.
+
 In the project directory, you can run:
 
 ### `npm start`

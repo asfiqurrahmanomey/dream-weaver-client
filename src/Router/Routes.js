@@ -6,10 +6,11 @@ import ServicesDetails from '../Pages/Home/Services/MoreServices/ServicesDetails
 import Login from '../Pages/Login/Login';
 import AllReview from '../Pages/MyReview/AllReview';
 import MyReview from '../Pages/MyReview/MyReview';
+import AddServices from '../Pages/Shared/AddServices/AddServices';
 import SignUp from '../Pages/SignUp/SignUp';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 
-const { createBrowserRouter } = require("react-router-dom")
+const { createBrowserRouter, Link } = require("react-router-dom")
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
+                path: 'addservices',
+                element: <AddServices></AddServices>
+            },
+            {
                 path: '/myreview',
                 element: <PrivateRoute>
                     <MyReview></MyReview>
@@ -53,6 +58,10 @@ const router = createBrowserRouter([
                 element: <AllReview></AllReview>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <div className='bg-blue-500 my-20 mx-20 p-12 rounded-lg shadow-lg text-white text-3xl'><Link className='mx-auto' to='/'>This Page not found click on me to go to main page</Link></div>
     }
 ])
 

@@ -21,7 +21,7 @@ const Header = () => {
                 user?.email ?
                     <>
                         <Link to={'/myreview'} className='hover:text-orange-600 hover:underline'>My Review</Link>
-                        <Link to={'/addservice'} className='hover:text-orange-600 hover:underline'>Add Service</Link>
+                        <Link to={'/addservices'} className='hover:text-orange-600 hover:underline'>Add Service</Link>
                         <button onClick={handleLogOut} className='hover:text-orange-600 hover:underline'>Sign Out</button>
                     </>
                     :
