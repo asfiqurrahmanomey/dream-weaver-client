@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyReview = () => {
     const { user } = useContext(AuthContext);
@@ -29,7 +31,13 @@ const MyReview = () => {
             body: JSON.stringify(review)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Review Success')
+                    form.rest();
+                }
+            })
             .catch(err => console.error(err));
     }
 
@@ -91,6 +99,16 @@ const MyReview = () => {
                     </div>
                 </div>
             </section>
+            <ToastContainer position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark" />
         </div>
     );
 };
